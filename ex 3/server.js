@@ -14,7 +14,7 @@ app.post("/login", (req, res) => {
     return res.json({ mensagem: "Login realizado com sucesso!" }); // Mostra que o usuário e a senha colocados estão corretos.
   }
 
-  return res.status(500).json({
+  return res.status(401).json({
     erro: "Usuário ou senha inválidos", // mostra que o usuário e a senha estão errados, então estão inválidos.
     usuario: usuario, // Campo "usuario" adiciona no JSON o valor digitado pelo cliente, para mostrar quem tentou fazer login.
   });
