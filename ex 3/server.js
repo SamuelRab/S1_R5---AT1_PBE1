@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 3000;
+const PORT = 8081;
 
 app.use(express.json());
 
@@ -16,7 +16,6 @@ app.post("/login", (req, res) => {
 
   return res.status(401).json({
     erro: "Usuário ou senha inválidos", // mostra que o usuário e a senha estão errados, então estão inválidos.
-    usuario: usuario, // Campo "usuario" adiciona no JSON o valor digitado pelo cliente, para mostrar quem tentou fazer login.
   });
 });
 
